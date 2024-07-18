@@ -1,0 +1,26 @@
+if("${RAPIDJSON_INCLUDE_DIR}" STREQUAL "" OR "${RAPIDJSON_INCLUDE_DIR}" STREQUAL "RAPIDJSON_INCLUDE_DIR-NOTFOUND")
+
+
+  find_path(RAPIDJSON_INCLUDE_DIR 
+    NAMES rapidjson.h
+    PATHS "${CMAKE_CURRENT_SOURCE_DIR}/../Tools/rapidjson-master/include/rapidjson"
+    PATHS "${CMAKE_CURRENT_SOURCE_DIR}/../Tools/rapidjson/include/rapidjson"
+    PATHS "${CMAKE_CURRENT_SOURCE_DIR}/../Tools/rapidjson")
+ 
+ 
+  #include(FindPackageHandleStandardArgs)
+  #find_package_handle_standard_args(CLP DEFAULT_MSG CLP_LIBRARY CLP_INCLUDE_DIR COIN_LIBRARY COIN_INCLUDE_DIR)
+
+  if (NOT "${RAPIDJSON_INCLUDE_DIR}" STREQUAL "RAPIDJSON_INCLUDE_DIR-NOTFOUND")
+    message("-- Found RAPIDJSON  ${RAPIDJSON_INCLUDE_DIR} " )
+  endif()
+  mark_as_advanced(RAPIDJSON_INCLUDE_DIR)
+
+endif()
+
+
+if (NOT "${RAPIDJSON_INCLUDE_DIR}" STREQUAL "RAPIDJSON_INCLUDE_DIR-NOTFOUND" )
+  set(RAPIDJSON_INCLUDE_DIR ${RAPIDJSON_INCLUDE_DIR})
+  set(RAPIDJSON_DEFINITIONS "-DJSON_IS_FOUND")
+endif()
+

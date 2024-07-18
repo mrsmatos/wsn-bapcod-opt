@@ -1,0 +1,129 @@
+Application parameters:
+  batch  =>  nothing
+  instance  =>  "/IN/egl-e1-A.dat"
+  out  =>  nothing
+  ub  =>  3549.0
+  maxr  =>  5
+  minr  =>  5
+  cfg  =>  "/CARP/src/../config/CARP.cfg"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+VRPSolver beta v0.21, 30/09/2019. Web: vrpsolver.math.u-bordeaux.fr
+Corresponds to the solver by Pessoa, Sadykov, Uchoa and Vanderbeck (2019)
+Paper: dx.doi.org/10.1007/978-3-030-17953-3_27
+USE THIS CODE ONLY FOR ACADEMIC PURPOSES AT YOUR OWN RISK
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BaPCod v044, 16/10/2019, © Inria Bordeaux, France (license expires 1/02/2021)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+VRPSolver parameters:
+GlobalTimeLimit = 21474836
+MaxNbOfBBtreeNodeTreated = 100000
+treeSearchStrategy = 1
+RCSPstopCutGenTimeThresholdInPricing = 6
+RCSPhardTimeThresholdInPricing = 15
+RCSPnumberOfBucketsPerVertex = 50
+RCSPdynamicBucketSteps = 1
+RCSPuseBidirectionalSearch = 2
+RCSPapplyReducedCostFixing = 1
+RCSPmaxNumOfColsPerIteration = 50
+RCSPmaxNumOfColsPerExactIteration = 300
+RCSPheurLabelingStrategy = 0
+StabilizationMinPhaseOfStage = 0
+RCSPmaxNumOfLabelsInEnumeration = 500000
+RCSPmaxNumOfEnumeratedSolutions = 1000000
+RCSPmaxNumOfEnumSolutionsForMIP = 10000
+RCSPinitNGneighbourhoodSize = 8
+RCSPmaxNGneighbourhoodSize = 8
+RCSPrankOneCutsMaxNumPerRound = 50
+RCSPrankOneCutsMaxNumRows = 5
+RCSPrankOneCutsMemoryType = 2
+CutTailingOffThreshold = 0.01
+CutTailingOffCounterThreshold = 5
+SafeDualBoundScaleFactor = -1
+StrongBranchingPhaseOneCandidatesNumber = 100
+StrongBranchingPhaseOneTreeSizeEstimRatio = 1
+StrongBranchingPhaseTwoCandidatesNumber = 5
+StrongBranchingPhaseTwoTreeSizeEstimRatio = 0.1
+MaxTimeForRestrictedMasterIpHeur = -1
+DivingHeurUseDepthLimit = -1
+MaxLDSbreadth = 0
+MaxLDSdepth = 0
+New model incumbent solution 3549, TIME = 0h0m0s3t = 3
+Model is built TIME = 0h0m2s17t = 217
+************************************************************************************************
+**** BaB tree root node
+**** Local DB = -1e+12, global bounds : [ -1e+12 , 3549 ], TIME = 0h0m2s17t = 217
+**** 1 open nodes, 0 columns (0 active), 0 dyn. constrs. (0 active), 104 art. vars. (104 active)
+************************************************************************************************
+<DWph=2> <it= 10> <et=2.61> <Mt= 0.00> <Spt= 0.38> <nCl=500> <DB=-795429.1249> <Mlp=501493.6564> <PB=3549> 
+<DWph=2> <it= 20> <et=2.97> <Mt= 0.01> <Spt= 0.31> <nCl=500> <DB=-249118.3887> <Mlp=232353.5038> <PB=3549> 
+<DWph=2> <it= 30> <et=3.35> <Mt= 0.03> <Spt= 0.30> <nCl=483> <DB=-86315.3820> <Mlp=17805.3457> <PB=3549> 
+<DWph=2> <it= 40> <et=3.66> <Mt= 0.02> <Spt= 0.24> <nCl=331> <DB= -128.1186> <Mlp= 6650.4282> <PB=3549> 
+<DWph=2> <it= 50> <et=4.05> <Mt= 0.03> <Spt= 0.33> <nCl=500> <DB= 2037.2376> <Mlp= 4333.7490> <PB=3549> 
+<DWph=2> <it= 60> <et=4.40> <Mt= 0.03> <Spt= 0.30> <nCl=479> <DB= 3288.3820> <Mlp= 3506.6473> <PB=3549> 
+<DWph=2> <it= 70> <et=4.77> <Mt= 0.03> <Spt= 0.30> <nCl=159> <DB= 3409.4462> <Mlp= 3425.8376> <PB=3549> 
+<DWph=2> <it= 80> <et=5.33> <Mt= 0.02> <Spt= 0.49> <nCl= 37> <DB= 3416.5349> <Mlp= 3424.6228> <PB=3549> 
+<DWph=2> <it= 82> <et=5.55> <Mt= 0.01> <Spt= 0.21> <nCl=  2> <DB= 3424.6228> <Mlp= 3424.6228> <PB=3549> 
+<DWph=1> <it= 90> <et=6.34> <Mt= 0.01> <Spt= 0.72> <nCl= 62> <DB= 3413.1548> <Mlp= 3422.4779> <PB=3549> 
+<DWph=1> <it= 95> <et=7.19> <Mt= 0.01> <Spt= 0.81> <nCl= 16> <DB= 3422.0795> <Mlp= 3422.0795> <PB=3549> 
+<DWph=0> <it= 98> <et=10.16> <Mt= 0.00> <Spt= 2.94> <nCl= 84> <DB= 3422.0522> <Mlp= 3422.0522> <PB=3549> 
+Reduced cost fixing for graph G_1... took 2.03 sec., 214785 buck. arcs remain (52% from prev., 24.7% from max.)
+Run enumeration... took 0.34 sec. and not succeeded.
+Bucket graph for G_1 is regenerated as bucket steps were adjusted for 104 vertices
+ColGenEvalAlg final dual bound: 3422.05 (rounded: 3423)
+Called user-defined odcut callback
+----- Add fac. cuts : CAP(85) UserCuts0(3), max.viol = 0.961121, aver.viol = 0.181871, sep/add took 1.38/0.65 sec. -----
+4561 columns (4561 active), 88 dyn. constrs. (88 active), 195 art. vars. (195 active)
+<DWph=2> <it= 10> <et=16.11> <Mt= 0.29> <Spt= 0.84> <nCl=288> <DB= 3513.8626> <Mlp= 3534.9231> <PB=3549> 
+<DWph=2> <it= 17> <et=17.14> <Mt= 0.08> <Spt= 0.91> <nCl= 64> <DB= 3529.5949> <Mlp= 3534.3025> <PB=3549> 
+<DWph=1> <it= 18> <et=17.34> <Mt= 0.00> <Spt= 0.18> <nCl=  0> <DB= 3534.3025> <Mlp= 3534.3025> <PB=3549> 
+<DWph=0> <it= 20> <et=17.72> <Mt= 0.02> <Spt= 0.36> <nCl= 10> <DB= 3532.7293> <Mlp= 3534.2265> <PB=3549> 
+<DWph=0> <it= 21> <et=18.05> <Mt= 0.01> <Spt= 0.31> <nCl=  0> <DB= 3534.2122> <Mlp= 3534.2122> <PB=3549> 
+Reduced cost fixing for graph G_1... took 0.57 sec., 108577 buck. arcs remain (25.8% from prev., 6.57% from max.)
+Run enumeration... took 1.8 sec. and not succeeded.
+ColGenEvalAlg final dual bound: 3534.21 (rounded: 3535)
+Gap improvement since the last cut separation : 0.883513 (3422.05)
+Called user-defined odcut callback
+----- Add fac. cuts : CAP(19) UserCuts0(7), max.viol = 0.742857, aver.viol = 0.170715, sep/add took 0.31/0.14 sec. -----
+6168 columns (6168 active), 114 dyn. constrs. (39 active), 228 art. vars. (151 active)
+<DWph=2> <it= 10> <et=21.82> <Mt= 0.19> <Spt= 0.61> <nCl=183> <DB= 3535.7905> <Mlp= 3548.0000> <PB=3549> 
+<DWph=2> <it= 20> <et=22.80> <Mt= 0.07> <Spt= 0.84> <nCl= 37> <DB= 3546.8052> <Mlp= 3547.7111> <PB=3549> 
+<DWph=2> <it= 24> <et=23.32> <Mt= 0.02> <Spt= 0.46> <nCl= 11> <DB= 3547.6941> <Mlp= 3547.6941> <PB=3549> 
+<DWph=1> <it= 25> <et=23.53> <Mt= 0.00> <Spt= 0.20> <nCl=  0> <DB= 3547.6941> <Mlp= 3547.6941> <PB=3549> 
+<DWph=0> <it= 26> <et=23.79> <Mt= 0.00> <Spt= 0.24> <nCl=  0> <DB= 3547.6941> <Mlp= 3547.6941> <PB=3549> 
+Reduced cost fixing for graph G_1... took 0.18 sec., 54484 buck. arcs remain (50.2% from prev., 3.3% from max.)
+Run enumeration... took 0.96 sec. and succeeded! Pricing will be done by inspection.
+<DWph=2> <it= 27> <et=25.24> <Mt= 0.03> <Spt= 0.09> <nCl=  0> <DB= 3548.0000> <Mlp= 3548.0000> <PB=3549> 
+<DWph=1> <it= 28> <et=25.34> <Mt= 0.00> <Spt= 0.09> <nCl=  0> <DB= 3548.0000> <Mlp= 3548.0000> <PB=3549> 
+<DWph=0> <it= 29> <et=25.51> <Mt= 0.00> <Spt= 0.15> <nCl=  0> <DB= 3548.0000> <Mlp= 3548.0000> <PB=3549> 
+Reduced cost fixing for graph G_1...  took 0 sec., done by inspection with 32568 solutions, remains 24807 (76.2%)
+ColGenEvalAlg final dual bound: 3548 (rounded: 3548)
+Gap improvement since the last cut separation : 0.932376 (3534.21)
+Called user-defined odcut callback
+----- Add fac. cuts : R1C(75), max.viol = 0.375, aver.viol = 0.335833, sep/add took 0.02/0.03 sec. -----
+7295 columns (1127 active), 114 dyn. constrs. (89 active), 303 art. vars. (195 active)
+<DWph=2> <it=  1> <et=26.05> <Mt= 0.02> <Spt= 0.02> <nCl=  0> <DB= 3548.0000> <Mlp= 3548.0000> <PB=3549> 
+<DWph=1> <it=  2> <et=26.09> <Mt= 0.00> <Spt= 0.02> <nCl=  0> <DB= 3548.0000> <Mlp= 3548.0000> <PB=3549> 
+<DWph=0> <it=  3> <et=26.10> <Mt= 0.00> <Spt= 0.00> <nCl=  0> <DB= 3548.0000> <Mlp= 3548.0000> <PB=3549> 
+ColGenEvalAlg final dual bound: 3548 (rounded: 3548)
+Gap improvement since the last cut separation : -1.05501e-10 (3548)
+Called user-defined odcut callback
+----- Add fac. cuts : CAP(1) R1C(98), max.viol = 0.5, aver.viol = 0.200337, sep/add took 0.05/0.03 sec. -----
+7295 columns (1127 active), 213 dyn. constrs. (188 active), 402 art. vars. (294 active)
+Called user-defined odcut callback
+<DWph=2> <it=  1> <et=26.25> <Mt= 0.01> <Spt= 0.00> <nCl=  0> <DB=-1000000000000.0000> <Mlp= 3548.0000> <PB=3548> 
+ColGenEvalAlg final dual bound: 3548 (rounded: 3548)
+Gap improvement since the last cut separation : 1 (3548)
+New model incumbent solution 3548, TIME = 0h0m26s47t = 2647
+************************************************************************************************
+Search is finished, global bounds : [ 3548 , 3548 ], TIME = 0h0m26s48t = 2648
+************************************************************************************************
+[32mBaPCod : solution defined.[00m
+statistics: egl-e1-A & 1 & 3549.0 & 3548.00 & 26.47 & 1 & 3548.00 & 3548 & 26.48 \\
+########################################################
+Route #1: 1-2-3=2=4-69=58=60=61-60-62=66=68-66-62=63=65-63-62=60-58-69-4-2-1
+Route #2: 1-2-4-69-59-44=46=47-49=51-21-22=75-22=21=19=20=76-12=11-10=9-8-7-5=4-2-1
+Route #3: 1-2-4-69-58-60-67-56-55=56-42-41=35=32=33-32=34-32=31=23=75-22-21=51-49-47-46-44-59-69-4-2-1
+Route #4: 1-2-4-69-59=11-12=16=13=14-15-17=15=18=19-50=52=54-52-50=49=47-48=47-46-45=44=59-69-4-2-1
+Route #5: 1-2-4=69=59=58=57=42-43=44-59-69-4-2-1
+Cost: 3548.0
+########################################################

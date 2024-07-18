@@ -1,0 +1,10 @@
+Model: data/VRPTW/C101.txt
+CONSTANT bestDualBound: 191.3
+CONSTANT bestIncumbent: 191.3
+bcCountMastSol: 32
+bcCountSpSol: 34
+bcCountNodeProc: 1
+bcTimeMain: 9.96453
+bcTimeMastMPsol: 0.903948
+bcTimeSpSol: 4.60216
+

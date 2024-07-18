@@ -1,0 +1,88 @@
+Bapcod v0.82.5 and vrpsolver-docker-v0.4.1a
+CPLEX 1210
+Julia 1.4.2
+
+compilação
+
+	mkdir build
+	cd build
+	cmake -DCMAKE_BUILD_TYPE=Release ..
+	
+	or 
+	
+	cmake -DCMAKE_BUILD_TYPE=Release -Wno-dev       -DCPLEX_INCLUDE_DIR=$CPLEXINCDIR       -DCPLEX_LIBRARY_DIR=$CPLEXLIBDIR       -DCONCERT_INCLUDE_DIR=$CONCERTINCDIR       -DCONCERT_LIBRARY_DIR=$CONCERTLIBDIR       -DGUROBI_HOME=$GUROBI_HOME       ..
+	
+	make -j8 bapcod
+	
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+docker import -c "ENTRYPOINT [\"/julia-1.4.2/bin/julia\"]" bapdock.img bapdock-init
+docker import -c "ENTRYPOINT [\"/julia\"]" bapdock.img bapdock-init 
+
+docker run -it -d --name bapdock-cont bapdock-init
+
+docker cp /opt/ibm/ILOG/CPLEX_Studio2211/cplex bapdock-cont:/cplex
+----------------------------------
+docker run -it --rm -v /home/mraylan/Documentos/git-repositories/bapcod-v0.82.5/vrpsolver-docker-v0.4.1a/demos/CapacitatedVehicleRouting:/CapacitatedVehicleRouting bapdock
+
+julia> include("/CapacitatedVehicleRouting/src/run.jl") # load CVRP demo
+julia> main(["/CapacitatedVehicleRouting/data/A/A-n37-k6.vrp","-m","6","-M","6","-u","950","-o","/CapacitatedVehicleRouting/sol/A-n37-k6.sol"]) # run CVRP demo
+julia> main(["/CapacitatedVehicleRouting/data/A/A-n37-k5.vrp","-m","5","-M","5","-u","670"]) # running another instance without writing the solution
+julia> args = ["/CapacitatedVehicleRouting/data/A/A-n37-k5.vrp","-m","5","-M","5","-u","671"] # defining arguments before
+julia> main(args) # running with predefined arguments 
+
+
+docker run -it --rm -v /home/mraylan/Documentos/bapcod-v0.82.5/vrpsolver-docker-v0.4.1a/demos/CapacitatedVehicleRouting:/CapacitatedVehicleRouting -e LD_LIBRARY_PATH=/opt/ibm/ILOG/CPLEX_Studio1210/cplex/bin/x86-64_linux bapdock
+
+----------------------------------
+docker exec -it <nome_do_contêiner> bash
+docker commit container-ID bapdock
+docker stop bapdock-cont
+docker rm bapdock-cont
+
+ln -s /julia-1.4.2/bin/julia /usr/local/bin/julia
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+O erro ocorreu porque a biblioteca libcplex12100.so não foi encontrada. Isso indica que a biblioteca CPLEX, necessária para a execução do código, não está disponível no caminho especificado ou não foi instalada corretamente no contêiner Docker. Para resolver esse problema, siga estes passos:
+
+Verifique a Instalação do CPLEX: Certifique-se de que o CPLEX está instalado corretamente no contêiner. Se você copiou o diretório do CPLEX para o contêiner (como indicado pelo comando docker cp), verifique se o caminho está correto e se todos os arquivos necessários estão presentes.
+
+Configure o Caminho da Biblioteca:
+
+Você pode configurar o caminho da biblioteca no Julia usando a variável de ambiente LD_LIBRARY_PATH para incluir o diretório onde libcplex12100.so está localizado. Isso pode ser feito antes de iniciar o Julia ou dentro do próprio Julia usando o comando ENV.
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/caminho/para/cplex/lib
+
+Ou, dentro do Julia:
+
+ENV["LD_LIBRARY_PATH"] = "/caminho/para/cplex/lib"
+
+Substitua /caminho/para/cplex/lib pelo caminho real onde a biblioteca libcplex12100.so está localizada dentro do contêiner.
+
+Reinicie o Contêiner: Após ajustar o caminho da biblioteca, reinicie o contêiner para garantir que as alterações tenham efeito.
+
+Verifique as Dependências: Se o problema persistir, pode ser necessário verificar se todas as dependências do CPLEX estão instaladas no contêiner. Isso pode incluir a instalação de bibliotecas adicionais que o CPLEX necessita para funcionar corretamente.
+
+Se você seguiu todos esses passos e ainda enfrenta problemas, pode ser útil consultar a documentação do CPLEX para requisitos específicos de instalação e configuração, ou considerar a criação de um Dockerfile que automatize a instalação e configuração do CPLEX e de suas dependências no contêiner.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Para resolver o problema do erro libcplex12100.so: cannot open shared object file: No such file or directory, você precisa garantir que a biblioteca CPLEX está corretamente instalada e que o Julia pode encontrá-la. Aqui está um plano passo a passo para solucionar esse problema:
+
+Verifique a Instalação do CPLEX: Certifique-se de que o CPLEX está instalado no seu sistema. Se estiver usando um contêiner Docker, o CPLEX deve estar instalado dentro do contêiner.
+
+Localize a Biblioteca libcplex12100.so: Encontre o caminho completo onde a biblioteca libcplex12100.so está localizada. Se estiver dentro de um contêiner, você precisará acessar o contêiner para encontrar o arquivo.
+
+Configure a Variável de Ambiente LD_LIBRARY_PATH:
+
+Para sistemas Linux, você pode configurar a variável de ambiente LD_LIBRARY_PATH para incluir o diretório onde a biblioteca libcplex12100.so está localizada. Isso pode ser feito adicionando a seguinte linha ao seu arquivo .bashrc ou .bash_profile (ou executando diretamente no terminal):
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/caminho/para/diretorio/do/cplex
+
+Substitua /caminho/para/diretorio/do/cplex pelo caminho real onde a biblioteca está localizada.
+
+Reinicie o Terminal ou o Contêiner: Após ajustar a variável de ambiente, você pode precisar reiniciar o terminal ou o contêiner Docker para que as alterações tenham efeito.
+
+Verifique no Julia: Após configurar a variável de ambiente e reiniciar, tente executar o programa novamente para verificar se o problema foi resolvido.
+
+Se você estiver executando dentro de um contêiner Docker, pode ser necessário adicionar o comando para configurar LD_LIBRARY_PATH no Dockerfile ou executá-lo manualmente dentro do contêiner antes de iniciar o Julia.
+

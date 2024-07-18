@@ -1,0 +1,10 @@
+Model: data/randomInstances/inst10-10
+CONSTANT bestDualBound: 4
+bestIncumbent: 38
+bcCountMastSol: 13
+bcCountSpSol: 12
+bcCountNodeProc: 1
+bcTimeMain: 0.450417
+bcTimeMastMPsol: 0.184441
+bcTimeSpSol: 0.0371813
+

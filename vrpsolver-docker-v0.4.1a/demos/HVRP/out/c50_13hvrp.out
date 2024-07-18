@@ -1,0 +1,106 @@
+Application parameters:
+  brandao  =>  false
+  batch  =>  nothing
+  instance  =>  "/IN/c50_13hvrp.txt"
+  out  =>  nothing
+  ub  =>  3185.2
+  cfg  =>  "/HVRP/src/../config/HVRP.cfg"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+VRPSolver beta v0.11, 1/06/2019. Web: vrpsolver.math.u-bordeaux.fr
+Corresponds to the solver by Pessoa, Sadykov, Uchoa and Vanderbeck (2019)
+Paper: dx.doi.org/10.1007/978-3-030-17953-3_27
+USE THIS CODE ONLY FOR ACADEMIC PURPOSES AT YOUR OWN RISK
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BaPCod v042, 18/09/2019, © Inria Bordeaux, France (license expires 1/02/2021)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+VRPSolver parameters:
+GlobalTimeLimit = 36000
+MaxNbOfBBtreeNodeTreated = 100000
+treeSearchStrategy = 1
+RCSPstopCutGenTimeThresholdInPricing = 6
+RCSPhardTimeThresholdInPricing = 15
+RCSPnumberOfBucketsPerVertex = 25
+RCSPdynamicBucketSteps = 1
+RCSPuseBidirectionalSearch = 2
+RCSPapplyReducedCostFixing = 1
+RCSPmaxNumOfColsPerIteration = 30
+RCSPmaxNumOfColsPerExactIteration = 150
+RCSPheurLabelingStrategy = 0
+StabilizationMinPhaseOfStage = 0
+RCSPmaxNumOfLabelsInEnumeration = 1000000
+RCSPmaxNumOfEnumeratedSolutions = 5000000
+RCSPmaxNumOfEnumSolutionsForMIP = 10000
+RCSPinitNGneighbourhoodSize = 8
+RCSPmaxNGneighbourhoodSize = 8
+RCSPrankOneCutsMaxNumPerRound = 100
+RCSPrankOneCutsMaxNumRows = 5
+RCSPrankOneCutsMemoryType = 1
+CutTailingOffThreshold = 0.02
+CutTailingOffCounterThreshold = 3
+SafeDualBoundScaleFactor = -1
+StrongBranchingPhaseOneCandidatesNumber = 100
+StrongBranchingPhaseOneTreeSizeEstimRatio = 0.2
+StrongBranchingPhaseTwoCandidatesNumber = 5
+StrongBranchingPhaseTwoTreeSizeEstimRatio = 0.02
+MaxTimeForRestrictedMasterIpHeur = -1
+DivingHeurUseDepthLimit = -1
+MaxLDSbreadth = 0
+MaxLDSdepth = 0
+New model incumbent solution 3185.2, TIME = 0h0m0s4t = 4
+RCSP solver info : symmetric case is detected for graph G_4! 
+RCSP solver info : symmetric case is detected for graph G_3! 
+RCSP solver info : symmetric case is detected for graph G_6! 
+RCSP solver info : symmetric case is detected for graph G_2! 
+RCSP solver info : symmetric case is detected for graph G_5! 
+RCSP solver info : symmetric case is detected for graph G_1! 
+Model is built TIME = 0h0m1s83t = 183
+************************************************************************************************
+**** BaB tree root node
+**** Local DB = -1e+12, global bounds : [ -1e+12 , 3185.2 ], TIME = 0h0m1s83t = 183
+**** 1 open nodes, 0 columns (0 active), 0 dyn. constrs. (0 active), 112 art. vars. (112 active)
+************************************************************************************************
+<DWph=2> <it= 10> <et=2.07> <Mt= 0.01> <Spt= 0.15> <nCl=979> <DB=-28162.0261> <Mlp= 3893.8119> <PB=3185.2> 
+<DWph=2> <it= 18> <et=2.26> <Mt= 0.01> <Spt= 0.11> <nCl=404> <DB= 3159.4043> <Mlp= 3159.4043> <PB=3185.2> 
+<DWph=1> <it= 20> <et=2.33> <Mt= 0.00> <Spt= 0.06> <nCl= 29> <DB= 3128.3736> <Mlp= 3152.3026> <PB=3185.2> 
+<DWph=1> <it= 22> <et=2.43> <Mt= 0.00> <Spt= 0.09> <nCl=  1> <DB= 3151.4399> <Mlp= 3151.4399> <PB=3185.2> 
+<DWph=0> <it= 24> <et=2.65> <Mt= 0.01> <Spt= 0.20> <nCl=  2> <DB= 3151.4321> <Mlp= 3151.4321> <PB=3185.2> 
+Reduced cost fixing for graph G_4... took 0.01 sec., 11122 buck. arcs remain (30.3% from prev., 21% from max.)
+Run enumeration... took 0.04 sec. and succeeded! Pricing will be done by inspection.
+Reduced cost fixing for graph G_3... took 0 sec., 3564 buck. arcs remain (23.1% from prev., 8.89% from max.)
+Run enumeration... took 0.04 sec. and succeeded! Pricing will be done by inspection.
+Reduced cost fixing for graph G_6... took 0.03 sec., 9012 buck. arcs remain (16.1% from prev., 14.2% from max.)
+Run enumeration... took 0.05 sec. and succeeded! Pricing will be done by inspection.
+Reduced cost fixing for graph G_2... took 0 sec., 960 buck. arcs remain (14.5% from prev., 2.78% from max.)
+Run enumeration... took 0.04 sec. and succeeded! Pricing will be done by inspection.
+Reduced cost fixing for graph G_5... took 0.03 sec., 11521 buck. arcs remain (23.9% from prev., 19.6% from max.)
+Run enumeration... took 0.05 sec. and succeeded! Pricing will be done by inspection.
+Reduced cost fixing for graph G_1... took 0 sec., 165 buck. arcs remain (19.1% from prev., 0.862% from max.)
+Run enumeration... took 0.04 sec. and succeeded! Pricing will be done by inspection.
+ColGenEvalAlg final dual bound: 3151.43 (rounded: 3151.43)
+----- Terminating the node by MIP -----
+MIP found solution with value 3185.09
+New model incumbent solution 3185.09, TIME = 0h0m4s21t = 421
+************************************************************************************************
+Search is finished, global bounds : [ 3185.09 , 3185.09 ], TIME = 0h0m4s21t = 421
+************************************************************************************************
+[32mBaPCod : solution defined.[00m
+statistics: c50_13hvrp & 1 & 3185.2 & 3185.09 & 4.21 & 1 & 3185.09 & 3185.09 & 4.21 \\
+########################################################
+Route #1 type 4: 1 43 42 41 23 
+Route #2 type 2: 2 
+Route #3 type 2: 4 
+Route #4 type 1: 6 
+Route #5 type 3: 7 35 19 
+Route #6 type 3: 8 27 
+Route #7 type 5: 10 38 11 14 
+Route #8 type 4: 12 40 17 
+Route #9 type 3: 13 46 
+Route #10 type 5: 16 3 44 32 9 39 
+Route #11 type 3: 25 31 
+Route #12 type 1: 26 
+Route #13 type 4: 28 22 33 
+Route #14 type 6: 30 48 21 47 36 37 20 15 5 29 45 
+Route #15 type 1: 34 
+Route #16 type 4: 49 24 18 50 
+Cost: 3185.0887057438094
+########################################################

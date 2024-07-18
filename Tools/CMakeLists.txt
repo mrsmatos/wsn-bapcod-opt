@@ -1,0 +1,10 @@
+cmake_minimum_required (VERSION 3.12)
+
+if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/rcsp/CMakeLists.txt")
+    #message("Found lib rcsp project under " ${CMAKE_CURRENT_SOURCE_DIR})
+    add_subdirectories(rcsp)
+    if (${BCP_RCSP_VERSION} VERSION_LESS ${BCP_RCSP_MIN_REQUIRED_VERSION})
+      message(FATAL_ERROR "BCP_RCSP lib version ${BCP_RCSP_VERSION} is lower than min required ${BCP_RCSP_MIN_REQUIRED_VERSION}")
+    endif()
+    message("-- Found BCP_RCSP library version ${BCP_RCSP_VERSION}")
+endif()

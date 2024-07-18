@@ -1,0 +1,24 @@
+# If you want to use VRPSolver script to run this batch, comment lines for the docker call (starting with /HVRP/data) and uncomment lines below the VRPSolver script call (starting with data/).
+# docker call requires all paths being container paths (e.g. /HVRP/data/brandaoN1fsmd.txt -u 2211.8 -B -o /HVRP/sol/brandaoN1fsmd.sol)
+# VRPSolver script call requires that the paths (e.g. data/brandaoN1fsmd.txt -u 2211.8 -B -o sol/brandaoN1fsmd.sol) be relatives to the application directory
+# Tip: after a batch execution, call 'grep statistics out/brandao.out -h | cut -c13-' to get the results as rows for a LaTeX table.
+
+# docker run --rm -v /ABSOLUTE_PATH_TO_HVRP_APP:/HVRP bapdock /HVRP/src/run.jl -b /HVRP/brandao.batch &> out/brandao.out 
+/HVRP/data/brandaoN1fsmd.txt -u 2211.8 -B
+/HVRP/data/brandaoN1hd.txt -u 2234 -B
+/HVRP/data/brandaoN2fsmd.txt -u 2810.3 -B
+/HVRP/data/brandaoN2hd.txt -u 2852.1 -B
+/HVRP/data/brandaoN3fsmd.txt -u 2234.7 -B
+/HVRP/data/brandaoN3hd.txt -u 2379.1 -B
+/HVRP/data/brandaoN4fsmd.txt -u 1822.9 -B
+/HVRP/data/brandaoN4hd.txt -u 1839.4 -B
+
+# ./VRPSolver -b brandao.batch &> out/brandao.out
+#data/brandaoN1fsmd.txt -u 2211.8 -B
+#data/brandaoN1hd.txt -u 2234 -B
+#data/brandaoN2fsmd.txt -u 2810.3 -B
+#data/brandaoN2hd.txt -u 2852.1 -B
+#data/brandaoN3fsmd.txt -u 2234.7 -B
+#data/brandaoN3hd.txt -u 2379.1 -B
+#data/brandaoN4fsmd.txt -u 1822.9 -B
+#data/brandaoN4hd.txt -u 1839.4 -B

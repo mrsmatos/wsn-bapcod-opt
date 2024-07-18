@@ -1,0 +1,56 @@
+# If you want to use VRPSolver script to run this batch, comment lines for the docker call (starting with /CARP/data) and uncomment lines below the VRPSolver script call (starting with data/).
+# docker call requires all paths being container paths (e.g. /CARP/data/egl-e1-A.dat -u 3549 -o /CARP/sol/egl-e1-A.sol)
+# VRPSolver script call requires that the paths (e.g. data/egl-e1-A.dat -u 3549 -o sol/egl-e1-A.sol) be relatives to the application directory
+# Tip: after a batch execution, call 'grep statistics out/eglese.out -h | cut -c13-' to get the results as rows for a LaTeX table.
+
+# docker run --rm -v /ABSOLUTE_PATH_TO_CARP_APP:/CARP bapdock /CARP/src/run.jl -b /CARP/eglese.batch &> out/eglese.out 
+/CARP/data/egl-e1-A.dat -u 3549 -m 5 -M 5
+/CARP/data/egl-e1-B.dat -u 4499 -m 7 -M 7
+/CARP/data/egl-e1-C.dat -u 5596 -m 10 -M 10
+/CARP/data/egl-e2-A.dat -u 5019 -m 7 -M 7
+/CARP/data/egl-e2-B.dat -u 6318 -m 10 -M 10
+/CARP/data/egl-e2-C.dat -u 8336 -m 14 -M 14
+/CARP/data/egl-e3-A.dat -u 5899 -m 8 -M 8
+/CARP/data/egl-e3-B.dat -u 7776 -m 12 -M 12
+/CARP/data/egl-e3-C.dat -u 10293 -m 17 -M 17
+/CARP/data/egl-e4-A.dat -u 6445 -m 9 -M 9
+/CARP/data/egl-e4-B.dat -u 8962 -m 14 -M 14
+/CARP/data/egl-e4-C.dat -u 11530 -m 19 -M 19
+/CARP/data/egl-s1-A.dat -u 5019 -m 7 -M 7
+/CARP/data/egl-s1-B.dat -u 6389 -m 10 -M 10
+/CARP/data/egl-s1-C.dat -u 8519 -m 14 -M 14
+/CARP/data/egl-s2-A.dat -u 9869 -m 14 -M 14
+/CARP/data/egl-s2-B.dat -u 13058 -m 20 -M 20
+/CARP/data/egl-s2-C.dat -u 16426 -m 27 -M 27
+/CARP/data/egl-s3-A.dat -u 10202 -m 15 -M 15
+/CARP/data/egl-s3-B.dat -u 13683 -m 22 -M 22
+/CARP/data/egl-s3-C.dat -u 17189 -m 29 -M 29
+/CARP/data/egl-s4-A.dat -u 12145 -m 19 -M 19
+/CARP/data/egl-s4-B.dat -u 16188 -m 27 -M 27
+/CARP/data/egl-s4-C.dat -u 20462 -m 35 -M 35
+
+# ./VRPSolver -b eglese.batch &> out/eglese.out
+#data/egl-e1-A.dat -u 3549 -m 5 -M 5
+#data/egl-e1-B.dat -u 4499 -m 7 -M 7
+#data/egl-e1-C.dat -u 5596 -m 10 -M 10
+#data/egl-e2-A.dat -u 5019 -m 7 -M 7
+#data/egl-e2-B.dat -u 6318 -m 10 -M 10
+#data/egl-e2-C.dat -u 8336 -m 14 -M 14
+#data/egl-e3-A.dat -u 5899 -m 8 -M 8
+#data/egl-e3-B.dat -u 7776 -m 12 -M 12
+#data/egl-e3-C.dat -u 10293 -m 17 -M 17
+#data/egl-e4-A.dat -u 6445 -m 9 -M 9
+#data/egl-e4-B.dat -u 8962 -m 14 -M 14
+#data/egl-e4-C.dat -u 11530 -m 19 -M 19
+#data/egl-s1-A.dat -u 5019 -m 7 -M 7
+#data/egl-s1-B.dat -u 6389 -m 10 -M 10
+#data/egl-s1-C.dat -u 8519 -m 14 -M 14
+#data/egl-s2-A.dat -u 9869 -m 14 -M 14
+#data/egl-s2-B.dat -u 13058 -m 20 -M 20
+#data/egl-s2-C.dat -u 16426 -m 27 -M 27
+#data/egl-s3-A.dat -u 10202 -m 15 -M 15
+#data/egl-s3-B.dat -u 13683 -m 22 -M 22
+#data/egl-s3-C.dat -u 17189 -m 29 -M 29
+#data/egl-s4-A.dat -u 12145 -m 19 -M 19
+#data/egl-s4-B.dat -u 16188 -m 27 -M 27
+#data/egl-s4-C.dat -u 20462 -m 35 -M 35

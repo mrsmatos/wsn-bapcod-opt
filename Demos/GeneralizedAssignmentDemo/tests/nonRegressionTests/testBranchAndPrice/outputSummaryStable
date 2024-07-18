@@ -1,0 +1,10 @@
+Model: tests/data/gapC-5-100.txt
+CONSTANT bestDualBound: 1931
+CONSTANT bestIncumbent: 1931
+bcCountMastSol: 295
+bcCountSpSol: 1730
+bcCountNodeProc: 13
+bcTimeMain: 2131.38
+bcTimeMastMPsol: 79.1862
+bcTimeSpSol: 2010.16
+

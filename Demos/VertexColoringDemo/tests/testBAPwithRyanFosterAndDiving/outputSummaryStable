@@ -1,0 +1,10 @@
+Model: 
+CONSTANT bestDualBound: 4
+CONSTANT bestIncumbent: 4
+bcCountMastSol: 93
+bcCountSpSol: 67
+bcCountNodeProc: 7
+bcTimeMain: 76.4364
+bcTimeMastMPsol: 2.1831
+bcTimeSpSol: 71.8769
+

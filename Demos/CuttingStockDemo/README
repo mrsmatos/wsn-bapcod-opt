@@ -1,0 +1,7 @@
+To launch this application, you need to copy in the current folder those files:
+
+cp config/bcParameters.cfg config/dcspParameters.cfg data/inputList .
+
+You can also run CuttingStock this way:
+
+./bin/CuttingStock -b config/bcParameters.cfg -a config/dcspParameters.cfg -i data/inputList

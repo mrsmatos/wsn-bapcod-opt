@@ -1,0 +1,25 @@
+# Running all instances of the Eglese's benchmark
+./VRPSolver	data/egl-e1-A.dat	-u	3549	-m	5	-M	5	&>	out/egl-e1-A.out
+./VRPSolver	data/egl-e1-B.dat	-u	4499	-m	7	-M	7	&>	out/egl-e1-B.out
+./VRPSolver	data/egl-e1-C.dat	-u	5596	-m	10	-M	10	&>	out/egl-e1-C.out
+./VRPSolver	data/egl-e2-A.dat	-u	5019	-m	7	-M	7	&>	out/egl-e2-A.out
+./VRPSolver	data/egl-e2-B.dat	-u	6318	-m	10	-M	10	&>	out/egl-e2-B.out
+./VRPSolver	data/egl-e2-C.dat	-u	8336	-m	14	-M	14	&>	out/egl-e2-C.out
+./VRPSolver	data/egl-e3-A.dat	-u	5899	-m	8	-M	8	&>	out/egl-e3-A.out
+./VRPSolver	data/egl-e3-B.dat	-u	7776	-m	12	-M	12	&>	out/egl-e3-B.out
+./VRPSolver	data/egl-e3-C.dat	-u	10293	-m	17	-M	17	&>	out/egl-e3-C.out
+./VRPSolver	data/egl-e4-A.dat	-u	6445	-m	9	-M	9	&>	out/egl-e4-A.out
+./VRPSolver	data/egl-e4-B.dat	-u	8962	-m	14	-M	14	&>	out/egl-e4-B.out
+./VRPSolver	data/egl-e4-C.dat	-u	11530	-m	19	-M	19	&>	out/egl-e4-C.out
+./VRPSolver	data/egl-s1-A.dat	-u	5019	-m	7	-M	7	&>	out/egl-s1-A.out
+./VRPSolver	data/egl-s1-B.dat	-u	6389	-m	10	-M	10	&>	out/egl-s1-B.out
+./VRPSolver	data/egl-s1-C.dat	-u	8519	-m	14	-M	14	&>	out/egl-s1-C.out
+./VRPSolver	data/egl-s2-A.dat	-u	9869	-m	14	-M	14	&>	out/egl-s2-A.out
+./VRPSolver	data/egl-s2-B.dat	-u	13058	-m	20	-M	20	&>	out/egl-s2-B.out
+./VRPSolver	data/egl-s2-C.dat	-u	16426	-m	27	-M	27	&>	out/egl-s2-C.out
+./VRPSolver	data/egl-s3-A.dat	-u	10202	-m	15	-M	15	&>	out/egl-s3-A.out
+./VRPSolver	data/egl-s3-B.dat	-u	13683	-m	22	-M	22	&>	out/egl-s3-B.out
+./VRPSolver	data/egl-s3-C.dat	-u	17189	-m	29	-M	29	&>	out/egl-s3-C.out
+./VRPSolver	data/egl-s4-A.dat	-u	12217	-m	19	-M	19	&>	out/egl-s4-A.out
+./VRPSolver	data/egl-s4-B.dat	-u	16188	-m	27	-M	27	&>	out/egl-s4-B.out
+./VRPSolver	data/egl-s4-C.dat	-u	20462	-m	35	-M	35	&>	out/egl-s4-C.out

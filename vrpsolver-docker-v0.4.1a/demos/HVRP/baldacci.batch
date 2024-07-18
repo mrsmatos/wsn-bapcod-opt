@@ -1,0 +1,88 @@
+# If you want to use VRPSolver script to run this batch, comment lines for the docker call (starting with /HVRP/data) and uncomment lines below the VRPSolver script call (starting with data/).
+# docker call requires all paths being container paths (e.g. /HVRP/data/c50_13hvrp.txt -u 3185.2 -o /HVRP/sol/c50_13hvrp.sol)
+# VRPSolver script call requires that the paths (e.g. data/c50_13hvrp.txt -u 3185.2 -o sol/c50_13hvrp.sol) be relatives to the application directory
+# Tip: after a batch execution, call 'grep statistics out/baldacci.out -h | cut -c13-' to get the results as rows for a LaTeX table.
+
+# docker run --rm -v /ABSOLUTE_PATH_TO_HVRP_APP:/HVRP bapdock /HVRP/src/run.jl -b /HVRP/baldacci.batch &> out/baldacci.out 
+/HVRP/data/c50_13hvrp.txt -u 3185.2
+/HVRP/data/c50_14hvrp.txt -u 10107.7
+/HVRP/data/c50_15hvrp.txt -u 3065.4
+/HVRP/data/c50_16hvrp.txt -u 3265.6
+/HVRP/data/c75_17hvrp.txt -u 2077.1
+/HVRP/data/c75_18hvrp.txt -u 3743.7
+/HVRP/data/c100_19hvrp.txt -u 10420.5
+/HVRP/data/c100_20hvrp.txt -u 4760.8
+/HVRP/data/c50_13fsmf.txt -u 2406.5
+/HVRP/data/c50_14fsmf.txt -u 9119.2
+/HVRP/data/c50_15fsmf.txt -u 2586.5
+/HVRP/data/c50_16fsmf.txt -u 2720.6
+/HVRP/data/c75_17fsmf.txt -u 1734.7
+/HVRP/data/c75_18fsmf.txt -u 2369.8
+/HVRP/data/c100_19fsmf.txt -u 8662
+/HVRP/data/c100_20fsmf.txt -u 4029.8
+/HVRP/data/c50_13fsmfd.txt -u 2964.8
+/HVRP/data/c50_14fsmfd.txt -u 9127
+/HVRP/data/c50_15fsmfd.txt -u 2635.1
+/HVRP/data/c50_16fsmfd.txt -u 3169.1
+/HVRP/data/c75_17fsmfd.txt -u 2004.6
+/HVRP/data/c75_18fsmfd.txt -u 3148.1
+/HVRP/data/c100_19fsmfd.txt -u 8662
+/HVRP/data/c100_20fsmfd.txt -u 4153.2
+/HVRP/data/c50_13hd.txt -u 1518
+/HVRP/data/c50_14hd.txt -u 607.7
+/HVRP/data/c50_15hd.txt -u 1015.4
+/HVRP/data/c50_16hd.txt -u 1145.1
+/HVRP/data/c75_17hd.txt -u 1062.1
+/HVRP/data/c75_18hd.txt -u 1823.7
+/HVRP/data/c100_19hd.txt -u 1120.5
+/HVRP/data/c100_20hd.txt -u 1534.3
+/HVRP/data/c50_13fsmd.txt -u 1492
+/HVRP/data/c50_14fsmd.txt -u 603.4
+/HVRP/data/c50_15fsmd.txt -u 1000
+/HVRP/data/c50_16fsmd.txt -u 1131.1
+/HVRP/data/c75_17fsmd.txt -u 1038.7
+/HVRP/data/c75_18fsmd.txt -u 1800.9
+/HVRP/data/c100_19fsmd.txt -u 1105.6
+/HVRP/data/c100_20fsmd.txt -u 1530.6
+
+# ./VRPSolver -b baldacci.batch &> out/baldacci.out
+#data/c50_13hvrp.txt -u 3185.2
+#data/c50_14hvrp.txt -u 10107.7
+#data/c50_15hvrp.txt -u 3065.4
+#data/c50_16hvrp.txt -u 3265.6
+#data/c75_17hvrp.txt -u 2077.1
+#data/c75_18hvrp.txt -u 3743.7
+#data/c100_19hvrp.txt -u 10420.5
+#data/c100_20hvrp.txt -u 4760.8
+#data/c50_13fsmf.txt -u 2406.5
+#data/c50_14fsmf.txt -u 9119.2
+#data/c50_15fsmf.txt -u 2586.5
+#data/c50_16fsmf.txt -u 2720.6
+#data/c75_17fsmf.txt -u 1734.7
+#data/c75_18fsmf.txt -u 2369.8
+#data/c100_19fsmf.txt -u 8662
+#data/c100_20fsmf.txt -u 4029.8
+#data/c50_13fsmfd.txt -u 2964.8
+#data/c50_14fsmfd.txt -u 9127
+#data/c50_15fsmfd.txt -u 2635.1
+#data/c50_16fsmfd.txt -u 3169.1
+#data/c75_17fsmfd.txt -u 2004.6
+#data/c75_18fsmfd.txt -u 3148.1
+#data/c100_19fsmfd.txt -u 8662
+#data/c100_20fsmfd.txt -u 4153.2
+#data/c50_13hd.txt -u 1518
+#data/c50_14hd.txt -u 607.7
+#data/c50_15hd.txt -u 1015.4
+#data/c50_16hd.txt -u 1145.1
+#data/c75_17hd.txt -u 1062.1
+#data/c75_18hd.txt -u 1823.7
+#data/c100_19hd.txt -u 1120.5
+#data/c100_20hd.txt -u 1534.3
+#data/c50_13fsmd.txt -u 1492
+#data/c50_14fsmd.txt -u 603.4
+#data/c50_15fsmd.txt -u 1000
+#data/c50_16fsmd.txt -u 1131.1
+#data/c75_17fsmd.txt -u 1038.7
+#data/c75_18fsmd.txt -u 1800.9
+#data/c100_19fsmd.txt -u 1105.6
+#data/c100_20fsmd.txt -u 1530.6
