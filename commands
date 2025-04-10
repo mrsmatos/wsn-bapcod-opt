@@ -24,6 +24,9 @@ docker run -it -d --name bapdock-cont bapdock-init
 docker cp /opt/ibm/ILOG/CPLEX_Studio2211/cplex bapdock-cont:/cplex
 ----------------------------------
 docker run -it --rm -v /home/mraylan/Documentos/git-repositories/bapcod-v0.82.5/vrpsolver-docker-v0.4.1a/demos/CapacitatedVehicleRouting:/CapacitatedVehicleRouting bapdock
+docker run -it --rm -v /home/mraylan/Documentos/git-repositories/wsn-bapcod-opt/vrpsolver-docker-v0.4.1a/demos/CapacitatedVehicleRouting:/CapacitatedVehicleRouting bapdock
+
+docker run -it --rm -v /home/mraylan/Documents/git-repositories/wsn-bapcod-opt/vrpsolver-docker-v0.4.1a/demos/CapacitatedVehicleRouting:/CapacitatedVehicleRouting bapdock
 
 julia> include("/CapacitatedVehicleRouting/src/run.jl") # load CVRP demo
 julia> main(["/CapacitatedVehicleRouting/data/A/A-n37-k6.vrp","-m","6","-M","6","-u","950","-o","/CapacitatedVehicleRouting/sol/A-n37-k6.sol"]) # run CVRP demo
